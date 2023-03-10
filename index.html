@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+</head>
+  
+<body>
+
+<div id="select-panel">
+  <header>Tic Tac Toe</header>
+    <div class="btn-wrapper">
+      <button class="two-players" onclick="start(false)">Two players</button>
+      <button class="with-bot" onclick="start(true)">Play with bot</button>
+    </div>
+</div>
+  
+<div id="play-panel">
+    <section>
+        <div class="play-cell" onclick="userMove(this)"></div>
+        <div class="play-cell" onclick="userMove(this)"></div>
+        <div class="play-cell" onclick="userMove(this)"></div>
+    </section>
+    <section>
+        <div class="play-cell" onclick="userMove(this)"></div>
+        <div class="play-cell" onclick="userMove(this)"></div>
+        <div class="play-cell" onclick="userMove(this)"></div>
+    </section>
+    <section>
+        <div class="play-cell" onclick="userMove(this)"></div>
+        <div class="play-cell" onclick="userMove(this)"></div>
+        <div class="play-cell" onclick="userMove(this)"></div>
+    </section>
+</div>
+
+<!-- result box -->
+<div id="result-panel">
+  <header id="won-text"></header>
+  <div class="btn-wrapper">
+    <button onclick="restart()">Repeat</button>    
+    <button onclick="run()">Restart</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

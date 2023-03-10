@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-panel;
+    font-family: 'FontAwesome', 'Poppins', sans-serif;
+}
+
+:root {
+    --page: #eee;
+    --cell: #78becc;
+    --cell-hovering: #3d4250;
+    --text: #ffffcc;
+    --won: #BD022F;
+}
+
+body {
+    background: var(--page);
+}
+
+#select-panel, #play-panel, #result-panel {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);      
+    transition: transform 0.3s ease; 
+  
+    width: 400px;
+    background: #fff;
+}
+
+#select-panel, #result-panel {
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    }
+
+header {
+    padding-bottom: 4px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.btn-wrapper {
+    display: flex;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.btn-wrapper button {
+    margin-right: 5px;
+}
+
+#result-panel {
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+}
+
+#play-panel {
+    opacity: 0;
+    padding: 0;
+    margin-top: 50px;
+    pointer-events: none;
+}
+
+#play-panel section {
+  display: flex;
+  background: var(--page);
+}
+
+.play-cell {
+    display: block;
+    margin: 5px;
+    width: 100%;
+    height: 128px;
+    background: var(--cell);
+    color: var(--text);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.play-cell:hover {
+    background: var(--cell-hovering);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/*
+.x-sign::after {
+    content: '×'; 
+    font-size: 124px;
+    color: #7bf118;    
+}  
+
+.o-sign::after  {
+    content: 'o';
+    font-size: 115px;
+    color: yellow;      
+} */
+
+.won {
+    color: var(--won);
+}
+
+span {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--won);
+}
+
+button {
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    background: var(--cell);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button: hover {
+  transform: scale(0.96);
+}
